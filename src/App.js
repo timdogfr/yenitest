@@ -69,7 +69,7 @@ export const StyledLogo = styled.img`
 
 export const StyledImg = styled.img`
   box-shadow: 0px 5px 11px 2px rgba(0, 0, 0, 0.7);
-  border: 5px none var(--secondary);
+  border: 5px outset var(--secondary);
   background-color: var(--accent);
   border-radius: 100%;
   width: 368px;
