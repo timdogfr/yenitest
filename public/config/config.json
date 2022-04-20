@@ -2,9 +2,9 @@
   "CONTRACT_ADDRESS": "",
   "SCAN_LINK": "https://polygonscan.com/token/",
   "NETWORK": {
-    "NAME": "Celo",
-    "SYMBOL": "Celo",
-    "ID": 137
+    "NAME": "Celo (Mainnet)",
+    "SYMBOL": "CELO",
+    "ID": 42220
   },
   "NFT_NAME": "Celo Erectus",
   "SYMBOL": "Celo Erectus",
