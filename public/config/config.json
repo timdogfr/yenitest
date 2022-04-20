@@ -1,8 +1,8 @@
 {
   "CONTRACT_ADDRESS": "",
-  "SCAN_LINK": "https://polygonscan.com/token/",
+  "SCAN_LINK": "https://polygonscan.com/token/0x56546DAF99C69c0F6271FA287b30A1946cA466f0",
   "NETWORK": {
-    "NAME": "Celo (Mainnet)",
+    "NAME": "Celo",
     "SYMBOL": "CELO",
     "ID": 42220
   },
@@ -13,6 +13,6 @@
   "DISPLAY_COST": 4,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "Opeansea",
-  "MARKETPLACE_LINK": "https://opensea.io/collection/",
+  "MARKETPLACE_LINK": "https://opensea.io/collection/0x56546DAF99C69c0F6271FA287b30A1946cA466f0",
   "SHOW_BACKGROUND": true
 }
