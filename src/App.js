@@ -12,7 +12,7 @@ export const StyledButton = styled.button`
   padding: 10px;
   border-radius: 50px;
   border: none;
-  background-color: #6b6b6b80;
+  background-color: rgb(69 69 69 / 54%);
   padding: 10px;
   font-weight: bold;
   color: #e4e4e4;
