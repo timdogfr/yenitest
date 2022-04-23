@@ -1,18 +1,18 @@
 {
-  "CONTRACT_ADDRESS": "",
-  "SCAN_LINK": "https://polygonscan.com/token/0x56546DAF99C69c0F6271FA287b30A1946cA466f0",
+  "CONTRACT_ADDRESS": "0x5466B4C25B7E3F515f75335Cd9229D589fb27734",
+  "SCAN_LINK": "https://testnet.snowtrace.io/address/0x5466B4C25B7E3F515f75335Cd9229D589fb27734",
   "NETWORK": {
-    "NAME": "Celo",
-    "SYMBOL": "CELO",
-    "ID": 44787
+    "NAME": "Avalanche FUJI C-Chain",
+    "SYMBOL": "AVAX",
+    "ID": 43113
   },
-  "NFT_NAME": "Celo Erectus",
-  "SYMBOL": "Celo Erectus",
-  "MAX_SUPPLY": 1111,
-  "WEI_COST": 4000000000000000000,
-  "DISPLAY_COST": 4,
+  "NFT_NAME": "Toppem Sports",
+  "SYMBOL": "TMSPRTS",
+  "MAX_SUPPLY": 10000,
+  "WEI_COST": 100000000000000000,
+  "DISPLAY_COST": 0.10,
   "GAS_LIMIT": 285000,
-  "MARKETPLACE": "Opeansea",
-  "MARKETPLACE_LINK": "https://opensea.io/collection/0x56546DAF99C69c0F6271FA287b30A1946cA466f0",
+  "MARKETPLACE": "NFTrade",
+  "MARKETPLACE_LINK": "https://testnets.nftrade.com/assets/fuji/0x5466B4C25B7E3F515f75335Cd9229D589fb27734",
   "SHOW_BACKGROUND": true
 }
