@@ -201,7 +201,6 @@ function App() {
             style={{
               backgroundColor: "var(--accent)",
               padding: 163,
-              width: 100%;
               border: "2px dashed var(--secondary)",
               boxShadow: "0px 5px 11px 2px rgba(9.1,9.1,9.1,0.79)",
             }}
