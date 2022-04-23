@@ -1,5 +1,36 @@
 [
 	{
+		"inputs": [
+			{
+				"internalType": "address[]",
+				"name": "addresses",
+				"type": "address[]"
+			}
+		],
+		"name": "addAllToFreeMintList",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address[]",
+				"name": "addresses",
+				"type": "address[]"
+			},
+			{
+				"internalType": "uint256",
+				"name": "whitelistSpotAmount",
+				"type": "uint256"
+			}
+		],
+		"name": "addAllToWhitelist",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
 		"inputs": [],
 		"stateMutability": "nonpayable",
 		"type": "constructor"
@@ -76,11 +107,24 @@
 		"inputs": [
 			{
 				"internalType": "uint256",
-				"name": "_mintAmount",
+				"name": "numberOfTokens",
 				"type": "uint256"
 			}
 		],
-		"name": "mint",
+		"name": "mintFreeList",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "numberOfTokens",
+				"type": "uint256"
+			}
+		],
+		"name": "mintPublic",
 		"outputs": [],
 		"stateMutability": "payable",
 		"type": "function"
@@ -89,18 +133,13 @@
 		"inputs": [
 			{
 				"internalType": "uint256",
-				"name": "_mintAmount",
+				"name": "numberOfTokens",
 				"type": "uint256"
-			},
-			{
-				"internalType": "address",
-				"name": "_receiver",
-				"type": "address"
 			}
 		],
-		"name": "mintForAddress",
+		"name": "mintWhitelist",
 		"outputs": [],
-		"stateMutability": "nonpayable",
+		"stateMutability": "payable",
 		"type": "function"
 	},
 	{
@@ -201,25 +240,12 @@
 	{
 		"inputs": [
 			{
-				"internalType": "uint256",
-				"name": "_cost",
-				"type": "uint256"
-			}
-		],
-		"name": "setCost",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
 				"internalType": "string",
-				"name": "_hiddenMetadataUri",
+				"name": "_uri",
 				"type": "string"
 			}
 		],
-		"name": "setHiddenMetadataUri",
+		"name": "setBaseURI",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -228,11 +254,11 @@
 		"inputs": [
 			{
 				"internalType": "uint256",
-				"name": "_maxMintAmountPerTx",
+				"name": "_maxFreeMintAddresses",
 				"type": "uint256"
 			}
 		],
-		"name": "setMaxMintAmountPerTx",
+		"name": "setMaxFreeMintAddresses",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -240,12 +266,12 @@
 	{
 		"inputs": [
 			{
-				"internalType": "bool",
-				"name": "_state",
-				"type": "bool"
+				"internalType": "uint256",
+				"name": "_maxWhitelistedAddresses",
+				"type": "uint256"
 			}
 		],
-		"name": "setPaused",
+		"name": "setMaxWhitelistedAddresses",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -253,12 +279,12 @@
 	{
 		"inputs": [
 			{
-				"internalType": "bool",
-				"name": "_state",
-				"type": "bool"
+				"internalType": "uint256",
+				"name": "price",
+				"type": "uint256"
 			}
 		],
-		"name": "setRevealed",
+		"name": "setPublicPrice",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -266,12 +292,12 @@
 	{
 		"inputs": [
 			{
-				"internalType": "string",
-				"name": "_uriPrefix",
-				"type": "string"
+				"internalType": "enum NFT.SaleStatus",
+				"name": "_saleStatus",
+				"type": "uint8"
 			}
 		],
-		"name": "setUriPrefix",
+		"name": "setSaleStatus",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -279,12 +305,12 @@
 	{
 		"inputs": [
 			{
-				"internalType": "string",
-				"name": "_uriSuffix",
-				"type": "string"
+				"internalType": "uint256",
+				"name": "price",
+				"type": "uint256"
 			}
 		],
-		"name": "setUriSuffix",
+		"name": "setWhitelistPrice",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -378,7 +404,26 @@
 	},
 	{
 		"inputs": [],
-		"name": "cost",
+		"name": "baseURI",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_address",
+				"type": "address"
+			}
+		],
+		"name": "freeMintRemaining",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -409,13 +454,34 @@
 		"type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "hiddenMetadataUri",
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "offset",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "limit",
+				"type": "uint256"
+			}
+		],
+		"name": "getTokenIdPage",
 		"outputs": [
 			{
-				"internalType": "string",
+				"internalType": "uint256[]",
 				"name": "",
-				"type": "string"
+				"type": "uint256[]"
+			},
+			{
+				"internalType": "uint256",
+				"name": "nextOffset",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "total",
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
@@ -447,7 +513,7 @@
 	},
 	{
 		"inputs": [],
-		"name": "maxMintAmountPerTx",
+		"name": "MAX_LIST_ADD_ADDRESSES",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -460,7 +526,72 @@
 	},
 	{
 		"inputs": [],
-		"name": "maxSupply",
+		"name": "MAX_PUBLIC_SUPPLY",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "MAX_TOTAL_SUPPLY",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "maxFreeMintAddresses",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "maxMintPerTx",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "maxMintPerWallet",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "maxWhitelistedAddresses",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -518,12 +649,12 @@
 	},
 	{
 		"inputs": [],
-		"name": "paused",
+		"name": "publicPrice",
 		"outputs": [
 			{
-				"internalType": "bool",
+				"internalType": "uint256",
 				"name": "",
-				"type": "bool"
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
@@ -531,12 +662,67 @@
 	},
 	{
 		"inputs": [],
-		"name": "revealed",
+		"name": "ROYALTY_ADDRESS",
 		"outputs": [
 			{
-				"internalType": "bool",
+				"internalType": "address",
 				"name": "",
-				"type": "bool"
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "ROYALTY_NUMERATOR",
+		"outputs": [
+			{
+				"internalType": "uint96",
+				"name": "",
+				"type": "uint96"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_tokenId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_salePrice",
+				"type": "uint256"
+			}
+		],
+		"name": "royaltyInfo",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "saleStatus",
+		"outputs": [
+			{
+				"internalType": "enum NFT.SaleStatus",
+				"name": "",
+				"type": "uint8"
 			}
 		],
 		"stateMutability": "view",
@@ -578,7 +764,50 @@
 		"inputs": [
 			{
 				"internalType": "uint256",
-				"name": "_tokenId",
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "tokenByIndex",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "tokenOfOwnerByIndex",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "tokenId",
 				"type": "uint256"
 			}
 		],
@@ -607,32 +836,6 @@
 		"type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "uriPrefix",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "uriSuffix",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
 		"inputs": [
 			{
 				"internalType": "address",
@@ -646,6 +849,51 @@
 				"internalType": "uint256[]",
 				"name": "",
 				"type": "uint256[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "WHITELIST_MINT_PER_ENTRY",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_address",
+				"type": "address"
+			}
+		],
+		"name": "whitelistMintRemaining",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "whitelistPrice",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
