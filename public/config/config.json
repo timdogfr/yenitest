@@ -1,18 +1,18 @@
 {
-  "CONTRACT_ADDRESS": "0x5466B4C25B7E3F515f75335Cd9229D589fb27734",
-  "SCAN_LINK": "https://testnet.snowtrace.io/address/0x5466B4C25B7E3F515f75335Cd9229D589fb27734",
+  "CONTRACT_ADDRESS": "0xAd40F62e08a2d8714E7bDc09A6a5e973d3177667",
+  "SCAN_LINK": "https://testnet.snowtrace.io/address/0xAd40F62e08a2d8714E7bDc09A6a5e973d3177667",
   "NETWORK": {
     "NAME": "Avalanche FUJI C-Chain",
     "SYMBOL": "AVAX",
     "ID": 43113
   },
-  "NFT_NAME": "Toppem Sports",
-  "SYMBOL": "TMSPRTS",
+  "NFT_NAME": "NFT",
+  "SYMBOL": "SYMBOL",
   "MAX_SUPPLY": 10000,
-  "WEI_COST": 100000000000000000,
-  "DISPLAY_COST": 0.10,
+  "WEI_COST": 1000000000000000000,
+  "DISPLAY_COST": 1.00,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "NFTrade",
-  "MARKETPLACE_LINK": "https://testnets.nftrade.com/assets/fuji/0x5466B4C25B7E3F515f75335Cd9229D589fb27734",
+  "MARKETPLACE_LINK": "https://testnets.nftrade.com/assets/fuji/0xAd40F62e08a2d8714E7bDc09A6a5e973d3177667",
   "SHOW_BACKGROUND": true
 }
