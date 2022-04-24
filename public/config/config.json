@@ -1,18 +1,18 @@
 {
-  "CONTRACT_ADDRESS": "0x2F29DE49dA658302384fcB9215E17e4781CDFB4c",
-  "SCAN_LINK": "https://testnet.snowtrace.io/address/0x2F29DE49dA658302384fcB9215E17e4781CDFB4c",
+  "CONTRACT_ADDRESS": "0x7ff2fd9AC9a04D60D34118E11f9d09A4A87b326b",
+  "SCAN_LINK": "https://alfajores-blockscout.celo-testnet.org/address/0x7ff2fd9AC9a04D60D34118E11f9d09A4A87b326b",
   "NETWORK": {
-    "NAME": "Avalanche FUJI C-Chain",
-    "SYMBOL": "AVAX",
-    "ID": 43113
+    "NAME": "Celo (Alfajores Testnet)",
+    "SYMBOL": "CELO",
+    "ID": 44787
   },
-  "NFT_NAME": "NFT",
-  "SYMBOL": "SYMBOL",
+  "NFT_NAME": "Celo Erectus",
+  "SYMBOL": "Erectus",
   "MAX_SUPPLY": 10000,
-  "WEI_COST": 1000000000000000000,
-  "DISPLAY_COST": 1.00,
+  "WEI_COST": 6000000000000000000,
+  "DISPLAY_COST": 6.00,
   "GAS_LIMIT": 285000,
-  "MARKETPLACE": "NFTrade",
-  "MARKETPLACE_LINK": "https://testnets.nftrade.com/assets/fuji/0x2F29DE49dA658302384fcB9215E17e4781CDFB4c",
+  "MARKETPLACE": "Tofunft",
+  "MARKETPLACE_LINK": "https://tofunft.com/",
   "SHOW_BACKGROUND": true
 }
