@@ -1,6 +1,6 @@
 {
-  "CONTRACT_ADDRESS": "0x658e22425e9A63e8A7E1a9d4A1602EfD47E98aeD",
-  "SCAN_LINK": "https://alfajores-blockscout.celo-testnet.org/address/0x658e22425e9A63e8A7E1a9d4A1602EfD47E98aeD",
+  "CONTRACT_ADDRESS": "0xd10d68056032169ad8f6546463db0478cB01E77E",
+  "SCAN_LINK": "https://alfajores-blockscout.celo-testnet.org/address/0xd10d68056032169ad8f6546463db0478cB01E77E",
   "NETWORK": {
     "NAME": "Celo (Alfajores Testnet)",
     "SYMBOL": "CELO",
