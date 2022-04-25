@@ -199,7 +199,7 @@ function App() {
             jc={"center"}
             ai={"center"}
             style={{
-              background-color: #31313185;
+              backgroundColor: "var(--accent)",
               padding: 119,
               border: "2px dashed var(--secondary)",
               boxShadow: "0px 5px 11px 2px rgba(9.1,9.1,9.1,0.79)",
