@@ -1,16 +1,16 @@
 {
-  "CONTRACT_ADDRESS": "0xd10d68056032169ad8f6546463db0478cB01E77E",
-  "SCAN_LINK": "https://alfajores-blockscout.celo-testnet.org/address/0xd10d68056032169ad8f6546463db0478cB01E77E",
+  "CONTRACT_ADDRESS": "0xbcf6ABB3b18088fcbc6d7f7245F645eCD783baFB",
+  "SCAN_LINK": "https://alfajores-blockscout.celo-testnet.org/address/0xbcf6ABB3b18088fcbc6d7f7245F645eCD783baFB",
   "NETWORK": {
-    "NAME": "Celo (Alfajores Testnet)",
+    "NAME": "Celo",
     "SYMBOL": "CELO",
     "ID": 44787
   },
   "NFT_NAME": "Celo Erectus",
   "SYMBOL": "Erectus",
   "MAX_SUPPLY": 1111,
-  "WEI_COST": 6000000000000000000,
-  "DISPLAY_COST": 6.00,
+  "WEI_COST": 100000000000000000,
+  "DISPLAY_COST": 0.10,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "",
   "MARKETPLACE_LINK": "",
