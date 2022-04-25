@@ -62,8 +62,8 @@ export const StyledLogo = styled.img`
 
 export const StyledImg = styled.img`
   box-shadow: rgb(119 185 179 / 70%) 0px 5px 11px 2px;
-  border: 5px dashed #7e7e7e00;
-  background-color: #4f4f4f;
+  border: 5px dashed rgba(126, 126, 126, 0);
+  background-color: rgb(79 79 79 / 35%);
   border-radius: 100%;
   width: 368px;
   @media (min-width: 900px) {
