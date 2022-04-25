@@ -276,19 +276,6 @@
 	{
 		"inputs": [
 			{
-				"internalType": "uint256",
-				"name": "_limit",
-				"type": "uint256"
-			}
-		],
-		"name": "setNftPerAddressLimit",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
 				"internalType": "string",
 				"name": "_notRevealedURI",
 				"type": "string"
@@ -374,6 +361,13 @@
 		"type": "function"
 	},
 	{
+		"inputs": [],
+		"name": "unreveal",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
 		"inputs": [
 			{
 				"internalType": "address[]",
@@ -381,7 +375,7 @@
 				"type": "address[]"
 			}
 		],
-		"name": "whitelistUser",
+		"name": "whitelistUsers",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -566,19 +560,6 @@
 				"internalType": "string",
 				"name": "",
 				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "nftPerAddressLimit",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
