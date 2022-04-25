@@ -1,6 +1,6 @@
 {
-  "CONTRACT_ADDRESS": "0x9Ca993a0F7D51219589626a5D11a2455fe5b8dA0",
-  "SCAN_LINK": "https://alfajores-blockscout.celo-testnet.org/address/0x9Ca993a0F7D51219589626a5D11a2455fe5b8dA0",
+  "CONTRACT_ADDRESS": "0x658e22425e9A63e8A7E1a9d4A1602EfD47E98aeD",
+  "SCAN_LINK": "https://alfajores-blockscout.celo-testnet.org/address/0x658e22425e9A63e8A7E1a9d4A1602EfD47E98aeD",
   "NETWORK": {
     "NAME": "Celo (Alfajores Testnet)",
     "SYMBOL": "CELO",
@@ -9,8 +9,8 @@
   "NFT_NAME": "Celo Erectus",
   "SYMBOL": "Erectus",
   "MAX_SUPPLY": 1111,
-  "WEI_COST": 6000000000000000000,
-  "DISPLAY_COST": 6.00,
+  "WEI_COST": 1000000000000000000,
+  "DISPLAY_COST": 1.00,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "Tofunft",
   "MARKETPLACE_LINK": "https://tofunft.com/",
