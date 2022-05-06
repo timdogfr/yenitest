@@ -8,6 +8,10 @@ import styled from "styled-components";
 const truncate = (input, len) =>
   input.length > len ? `${input.substring(0, len)}...` : input;
 
+const { createAlchemyWeb3, ethers } = require("@alch/alchemy-web3");
+var Web3 = require('web3');
+var Contract = require('web3-eth-contract');
+
 export const StyledButton = styled.button`
   padding: 10px;
   border-radius: 50px;
@@ -153,6 +157,26 @@ function App() {
     }
     setMintAmount(newMintAmount);
   };
+  
+    const getDataWithoutWallet = async () => {
+    const web3 = createAlchemyWeb3("https://polygon-mumbai.g.alchemy.com/v2/Tjlfal65795w2pi-sSd6JUrY1SX-qkIt");
+    const abiResponse = await fetch("/config/abi.json", {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    });
+    const abi = await abiResponse.json();
+    var contract = new Contract(abi, '0x56546DAF99C69c0F6271FA287b30A1946cA466f0');
+    contract.setProvider(web3.currentProvider);
+    console.log(contract);
+    const totalSupply = await contract.methods
+      .totalSupply()
+      .call();
+    setTotalSupply(totalSupply);
+
+  }
+
 
   const getData = () => {
     if (blockchain.account !== "" && blockchain.smartContract !== null) {
@@ -173,6 +197,7 @@ function App() {
 
   useEffect(() => {
     getConfig();
+    getDataWithoutWallet();
   }, []);
 
   useEffect(() => {
