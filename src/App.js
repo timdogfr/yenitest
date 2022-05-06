@@ -255,7 +255,7 @@ function App() {
                 <s.TextDescription
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
                 >
-                  Public Mint
+                  Whitelist Mint
                 </s.TextDescription>
                 <s.SpacerSmall />
                 {blockchain.account === "" ||
