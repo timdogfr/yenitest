@@ -183,7 +183,7 @@ function App() {
   }
 
 
-  const getData = () => {
+  const getData = async () => {
     if (blockchain.account !== "" && blockchain.smartContract !== null) {
       dispatch(fetchData(blockchain.account));
       const totalSupply =  await blockchain.smartContract.methods.totalSupply().call();
