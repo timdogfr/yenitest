@@ -245,7 +245,7 @@ function App() {
                 color: "var(--accent-text)",
               }}
             >
-              {data.totalSupply} / {CONFIG.MAX_SUPPLY}
+             <s.TextSubTitle size={1.4}>{1100-supply} of 1111 NFT's Available</s.TextSubTitle>
             </s.TextTitle>
             <s.TextDescription
               style={{
