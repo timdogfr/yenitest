@@ -186,6 +186,8 @@ function App() {
   const getData = () => {
     if (blockchain.account !== "" && blockchain.smartContract !== null) {
       dispatch(fetchData(blockchain.account));
+      const totalSupply =  await blockchain.smartContract.methods.totalSupply().call();
+      setTotalSupply(totalSupply);
     }
   };
 
