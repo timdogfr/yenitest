@@ -245,7 +245,7 @@ function App() {
                 color: "var(--accent-text)",
               }}
             >
-             <s.TextSubTitle size={1.4}>{1100-supply} of 1111 NFT's Available</s.TextSubTitle>
+             <s.TextSubTitle style={{ textAlign: "center", fontWeight: "bold", fontWeight: "bold", color: "var(--accent-text)", size={5}>{1111-supply} of 1111 NFT's Available</s.TextSubTitle>
             </s.TextTitle>
             <s.TextDescription
               style={{
