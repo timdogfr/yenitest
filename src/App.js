@@ -138,7 +138,11 @@ function App() {
         setFeedback(
           `WOW, the ${CONFIG.NFT_NAME} is yours! go visit NFT Market to view it.`
         );
-        setClaimingNft(false);
+        // setClaimingNft(false);
+        blockchain.smartContract.methods.totalSupply().call().then(res => {
+          setTotalSupply(res);
+        });
+        
         dispatch(fetchData(blockchain.account));
       });
   };
@@ -160,7 +164,7 @@ function App() {
   };
   
     const getDataWithoutWallet = async () => {
-    const web3 = createAlchemyWeb3("https://polygon-mumbai.g.alchemy.com/v2/Tjlfal65795w2pi-sSd6JUrY1SX-qkIt");
+    const web3 = createAlchemyWeb3("https://eth-mainnet.alchemyapi.io/v2/fopVAAza5ioAliVStbhwZMymHOrxlN6l");
     const abiResponse = await fetch("/config/abi.json", {
       headers: {
         "Content-Type": "application/json",
@@ -182,6 +186,8 @@ function App() {
   const getData = () => {
     if (blockchain.account !== "" && blockchain.smartContract !== null) {
       dispatch(fetchData(blockchain.account));
+      const totalSupply =  await blockchain.smartContract.methods.totalSupply().call();
+      setTotalSupply(totalSupply);
     }
   };
 
