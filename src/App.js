@@ -245,7 +245,7 @@ function App() {
                 color: "var(--accent-text)",
               }}
             >
-             <s.TextSubTitle size={15}>{1083-supply} of 1111 NFT's Available</s.TextSubTitle>
+             <s.TextSubTitle size={30}>{1083-supply} of 1111 NFT's Available</s.TextSubTitle>
             </s.TextTitle>
             <s.TextDescription
               style={{
